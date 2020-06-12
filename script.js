@@ -43,21 +43,21 @@ var numOfCharacters= prompt ("how many characters");
 
 //moves on to other confirms 
       }else{
-        // console.log(numOfCharacters);
+  // console.log(numOfCharacters);
 
-  //if correct move onto other confirmations re: characters/capitals
+//if correct move onto other confirmations re: characters/capitals
   var specialcharacters=confirm ("will there be special characters");
     if(specialcharacters===true){
     stringCheck ++;
   }
 
-  //confirm whether there will be numbers if yes add to 
+//confirm whether there will be numbers if yes add to 
   var numericCharacters=confirm ("will there be numbers");
   if(numericCharacters===true){
     stringCheck ++;
   }
 
-  //confirms lowercase letters
+//confirms lowercase letters
   var lowercaseCharacters=confirm ("will there be lowercase characters");
   if(lowercaseCharacters===true){
     stringCheck ++;
@@ -125,7 +125,6 @@ passwordText.value = password;
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
 
 //resetting the values to initial so a new password can be made without reloading page
 function resetValues(){
