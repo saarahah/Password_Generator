@@ -93,10 +93,10 @@ function generatePassword(){
       }
 
   //chooses randomly from the random array the values were pushed to
-      var random = randomArray[Math.floor(Math.random() * randomArray.length)]
+      var randomChoice = randomArray[Math.floor(Math.random() * randomArray.length)]
 
   //concatenates the strings
-      ourPassword += random;
+      ourPassword += randomChoice;
   }
   //
    return ourPassword
