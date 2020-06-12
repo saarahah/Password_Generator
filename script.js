@@ -23,7 +23,7 @@ var lowercaseCharacters;
 
 //creates function and asks user for numOfCharacters input for variable
 function generatePassword(){
-  var testPassword = "";
+  var ourPassword = "";
   var numOfCharacters= prompt ("how many characters");
 
 //check that the character type and length is correct
@@ -63,13 +63,20 @@ function generatePassword(){
   if(capitalLetters===true){
     stringCheck ++;
   }
+
+  //makes sure at least one of the conditions above is chosen
   if (stringCheck > 0 ){
+    
+  //adds one each iteration
     for (let i=0; i < numOfCharacters; i++){
+
+  //uses math random times the string length to randomly pick from each string of letters/numbers/etc
       var randomNumber = Math.floor(Math.random() * 10)
       var randomLetter =letterString[Math.floor(Math.random() * letterString.length)]
       var randomUppercase =letterUCString[Math.floor(Math.random() * letterUCString.length)]
       var randomCharacter = characterString[Math.floor(Math.random() * characterString.length)]
       
+  //pushes values into an empty array that stores the password
       if(specialcharacters===true){
         randomArray.push(randomCharacter);
       }
@@ -85,11 +92,14 @@ function generatePassword(){
         randomArray.push(randomNumber);
       }
 
-      var random =randomArray[Math.floor(Math.random() * randomArray.length)]
+  //chooses randomly from the random array the values were pushed to
+      var random = randomArray[Math.floor(Math.random() * randomArray.length)]
 
-      testPassword += random;
+  //concatenates the strings
+      ourPassword += random;
   }
-   return testPassword
+  //
+   return ourPassword
 
   }else{
     alert("you must have at least one character option")
@@ -109,7 +119,7 @@ var passwordText = document.querySelector("#password");
 generateBtn.addEventListener("click", writePassword);
 
 
-//resetting the values to initial so a new password can be made without reloading
+//resetting the values to initial so a new password can be made without reloading page
 function resetValues(){
   randomArray =[];
   stringCheck=0;
@@ -117,5 +127,5 @@ function resetValues(){
    specialcharacters===false;
    numericCharacters===false;
    lowercaseCharacters===false;
-  // console.log("reset this bitch");
+  // console.log("reset");
 }
