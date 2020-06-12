@@ -135,4 +135,6 @@ function resetValues(){
    numericCharacters===false;
    lowercaseCharacters===false;
 // console.log("resetted that garbage");
+
+//comment
 }
