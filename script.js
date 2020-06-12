@@ -23,7 +23,7 @@ var lowercaseCharacters;
 
 //creates function and asks user for numOfCharacters input for variable
 function generatePassword(){
-  var ourPassword = "";
+  var ourPassword = [];
   var numOfCharacters= prompt ("how many characters");
 
 //check that the character type and length is correct
@@ -95,10 +95,10 @@ function generatePassword(){
   //chooses randomly from the random array the values were pushed to
       var randomChoice = randomArray[Math.floor(Math.random() * randomArray.length)]
 
-  //concatenates the strings
+  //concatenates the strings ourpassword and random choice
       ourPassword += randomChoice;
   }
-  //
+  
    return ourPassword
 
   }else{
