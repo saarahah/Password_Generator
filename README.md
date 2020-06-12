@@ -5,3 +5,5 @@ This is a Javascript assignment to create a password generator that has user inp
 
 https://saarahah.github.io/Password_Generator/
 
+![image](images/pwgenscreenshot.PNG)
+
