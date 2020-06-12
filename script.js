@@ -73,7 +73,7 @@ var numOfCharacters= prompt ("how many characters");
   if (stringCheck > 0 ){
     
 //adds one each iteration
-    for (let i=0; i < numOfCharacters; i++){
+  for (let i=0; i < numOfCharacters; i++){
 
 //uses math random times the string length to randomly pick from each string of letters/numbers/etc
 var randomNumber = Math.floor(Math.random() * 10)
@@ -99,6 +99,7 @@ var randomCharacter = characterString[Math.floor(Math.random() * characterString
 
 //chooses randomly from the random array the values were pushed to
 var randomChoice = randomArray[Math.floor(Math.random() * randomArray.length)]
+  // console.log(randomArray);
 
 //concatenates ourpassword and random choice
     ourPassword += randomChoice;
